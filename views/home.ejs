@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs'); -%>
+<h1>Home</h1>
+<%=home %>
+<% lis.forEach((e)=>{ %>
+  <%  var str = e.content;  %>
+  <%  var st = str.substr(0,100); st+="....";%>
+  <div class="card bg-dark text-white">
+    <div class="card-img-overlay">
+      <h1 class="card-title" name="curr-head"><%= e.title %> </h1>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p ><%=st %> <a href="/posts/<%=e.title%>">read more</a></p>
+    </div>
+  </div>
+  <h1 > </h1>
+<% })%>
+<%- include('partials/footer.ejs'); -%>
